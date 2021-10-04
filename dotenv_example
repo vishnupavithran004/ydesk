@@ -1,0 +1,13 @@
+""" 
+Change the proper varibales and create a .env file 
+to implement  environment variables
+"""
+
+DJANGO_SETTINGS_MODULE = "help_desk.settings.development"
+DB_ENGINE = 'django.db.backends.postgresql'
+DB_NAME = 'help_desk_db'
+DB_USER = 'user'
+DB_PASSWORD = 'password'
+DB_HOST = 'localhost'
+DB_PORT = '5432'
+SECRET_KEY = 'secret'
