@@ -16,7 +16,7 @@ class Category(AbstractDate, AbstractUser):
 class Topic(AbstractDate, AbstractUser):
     description = models.TextField(blank=True, null=True)
     category = models.ForeignKey(
-        Category, models.DO_NOTHING, blank=True, null=True)
+        Category, blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'topic'
@@ -30,7 +30,7 @@ class Questions(AbstractDate, AbstractUser):
     answered_by = models.ForeignKey(
         User, models.DO_NOTHING, blank=True, null=True)
     topic = models.ForeignKey(
-        Topic, models.DO_NOTHING, blank=True, null=True)
+        Topic, blank=True, null=True, on_delete=models.CASCADE)
     
     class Meta:
         db_table = 'questions'
