@@ -5,7 +5,7 @@ from organization.models import Organization
 # Create your models here.
 
 class UserProfile(User):
-    int_phone = models.IntegerField(blank=True, null=True)
+    int_phone = models.BigIntegerField(blank=True, null=True)
     char_address = models.CharField(
         max_length=200, blank=True, null=True)
 
